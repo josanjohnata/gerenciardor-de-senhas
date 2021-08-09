@@ -16,6 +16,8 @@ class PassGen:
       [sg.Output(size=(32, 5))],
       [sg.Button('Gerar Senha')]
     ]
+    # Declarar janela
+    self.janela = sg.Window('Password Generator', layout)
 
   def Iniciar(self):
     pass
