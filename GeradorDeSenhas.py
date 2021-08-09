@@ -1,11 +1,13 @@
 import random
 import PySimpleGUI as sg
 import os
+from playsound import playsound
 
 class PassGen:
   def __init__(self):
     # Declarando o Layout
     sg.theme('Black')
+    playsound('secret.mp3', block=False)
     layout = [
       [sg.Text('Site/Software', sizer=(10, 1)),
        sg.Input(key='site', size=(20, 1))],
