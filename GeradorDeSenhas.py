@@ -29,7 +29,10 @@ class PassGen:
         print(nova_senha)
 
   def salvar_senha(self):
-    pass
+    char_list = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%&¨*'
+    chars = random.choices(char_list, k=int(valores['total_chars']))
+    new_pass = ''.join(chars)
+    return new_pass
 
 gen = PassGen()
 gen.Iniciar()
