@@ -36,7 +36,11 @@ class PassGen:
     return new_pass
 
   def salvar_senha(self, nova_senha, valores):
-    pass
+    with open('senhas.txt', 'a', newline='') as arquivo:
+      arquivo.write(
+        f"site: {valores['site']}, usuario: {valores['usuario']}, nova senha: {nova_senha}"
+      )
+    print('Arquivo salvo')
 
 gen = PassGen()
 gen.Iniciar()
